@@ -9,3 +9,4 @@
 - [Creating API](api.md)
 - [Validate Request](validate.md)
 - [Upload Image](image.md)
+- [Setup SQLite](sqlite.md)
