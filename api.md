@@ -133,4 +133,8 @@ Route::post('contact/store', function(Request $request){
 Route::patch('contact/{id}', function(Request $request, $id){
 	return Contact::findOrFail($id)->update(['name' => $request->name, 'email' => $request->email, 'phone' => $request->phone]);
 });
+
+Route::delete('contact/{id}', function($id){
+	return Contact::destroy($id);
+});
 ```
