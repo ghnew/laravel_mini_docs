@@ -108,3 +108,29 @@ class Article extends JsonResource
 }
 
 ```
+
+
+#OR
+
+
+```
+Route::middleware('auth:api')->get('/user', function (Request $request) {
+	return $request->user();
+});
+
+Route::get('contacts', function(){
+	return Contact::orderBy('created_at','desc')->get();
+});
+
+Route::get('contact/{id}', function($id){
+	return Contact::findOrFail($id);
+});
+
+Route::post('contact/store', function(Request $request){
+	return Contact::create(['name' => $request->name, 'email' => $request->email, 'phone' => $request->email])
+});
+
+Route::patch('contact/{id}', function(Request $request, $id){
+	return Contact::findOrFail($id)->update(['name' => $request->name, 'email' => $request->email, 'phone' => $request->phone])
+});
+```
