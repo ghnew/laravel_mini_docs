@@ -127,10 +127,10 @@ Route::get('contact/{id}', function($id){
 });
 
 Route::post('contact/store', function(Request $request){
-	return Contact::create(['name' => $request->name, 'email' => $request->email, 'phone' => $request->email])
+	return Contact::create(['name' => $request->name, 'email' => $request->email, 'phone' => $request->email]);
 });
 
 Route::patch('contact/{id}', function(Request $request, $id){
-	return Contact::findOrFail($id)->update(['name' => $request->name, 'email' => $request->email, 'phone' => $request->phone])
+	return Contact::findOrFail($id)->update(['name' => $request->name, 'email' => $request->email, 'phone' => $request->phone]);
 });
 ```
