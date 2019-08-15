@@ -1,5 +1,12 @@
 ## API
 
+### To prevent CORS add this to `index.php`
+
+```
+header('Access-Control-Allow-Origin: http://localhost:8080');  
+header('Access-Control-Allow-Methods: GET, PUT, POST, DELETE, OPTIONS');
+```
+
 ### add Routes here **routes/api.php**
 
 ```
