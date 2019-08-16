@@ -10,3 +10,4 @@
 - [Validate Request](validate.md)
 - [Upload Image](image.md)
 - [Setup SQLite](sqlite.md)
+- [API Authentication](api_authentication.md)
