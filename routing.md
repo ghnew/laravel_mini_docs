@@ -20,9 +20,12 @@ php artisan make:controller ControllerName --resource
 
 ```
 public function index(){
-    return view('templateName')->with([
-        "categories"=> "something",
-    ]);
+    $pizza = [
+        'type' => 'hawaiian', 
+        'base' => 'thick crust',
+        'price' => 2
+    ];
+    return view('pizzas', $pizza);
 }
 ```
 
